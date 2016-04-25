@@ -1,6 +1,7 @@
 #define CATCH_CONFIG_RUNNER
 #include "catch.hpp"
 #include <cmath>
+#define M_PI   3.14159265358979323846 
 
 
 int gcd(int a, int b){
@@ -70,10 +71,14 @@ TEST_CASE("mileToKilometer","[mileToKilometer]"){
 
 TEST_CASE("describe_zylindero","[zylindero]"){
 	REQUIRE(zylindero(5.89,2.37) == Approx(123.000892));
+	REQUIRE(zylindero(4.23,1.63) == Approx(60.0157294));
+	REQUIRE(zylindero(6.41,3.12) == Approx(186.821719));
 }
 
 TEST_CASE("describe_zylinderv","[zylinderv]"){
 	REQUIRE(zylinderv(5.89,2.37) == Approx(103.935009));
+	REQUIRE(zylinderv(4.23,1.63) == Approx(35.3073765));
+	REQUIRE(zylinderv(6.41,3.12) == Approx(196.02754));
 }
 
 TEST_CASE("describe_fract","[fract]"){
